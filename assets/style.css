@@ -1,12 +1,13 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.7;
   background-color: #fefefe;
   color: #1c1c1e;
   margin: 0 auto;
   padding: 2rem 1.25rem;
   max-width: 700px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 h1 {
