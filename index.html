@@ -15,7 +15,6 @@
   <nav>
     <button onclick="showPage('faq')">FAQ</button>
     <button onclick="showPage('guide')">使い方</button>
-    <button onclick="showPage('contact')">お問い合わせ</button>
   </nav>
 
   <div id="faq" class="page active">
@@ -26,23 +25,29 @@
     
     <h3>Q2. データのバックアップはできますか？</h3>
     <p>A. iCloud連携により自動的にバックアップされます。</p>
-    <!-- 以下、質問追加可 -->
+    <!-- 以下、追加の質問 -->
   </div>
 
   <div id="guide" class="page">
     <h2>使い方ガイド</h2>
-    <p>＋ボタンを押して取引を入力してください。</p>
-  </div>
+    
+   <p>このページでは、アプリの基本的な使い方を紹介します。</p>
 
-  <div id="contact" class="page">
-    <h2>お問い合わせ</h2>
-    <p>xx.yoshiki@icloud.com にご連絡ください。</p>
+    <h3>1. 仕訳の入力</h3>
+    <p>ホーム画面から「＋」ボタンをタップし、取引内容を入力してください。</p>
+
+    <h3>2. 科目の設定</h3>
+    <p>設定画面から「科目の管理」に進むと、カスタム科目の追加が可能です。</p>
+    <!-- 以下、追加のガイド -->
   </div>
 
   <script>
     function showPage(id) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+      
+      document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+      document.getElementById('btn-' + id).classList.add('active');
     }
   </script>
 </body>
