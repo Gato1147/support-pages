@@ -8,13 +8,21 @@
   <style>
     .page { display: none; }
     .page.active { display: block; }
+    button.active {
+      background-color: #005fcc;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <h1>サポートメニュー</h1>
   <nav>
+    <button id="btn-faq" onclick="showPage('faq')">FAQ</button>
+    <button id="btn-guide" onclick="showPage('guide')">使い方</button>
+    <!--
     <button onclick="showPage('faq')">FAQ</button>
     <button onclick="showPage('guide')">使い方</button>
+    -->
   </nav>
 
   <div id="faq" class="page active">
