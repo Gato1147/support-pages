@@ -3,15 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>サポートページ</title>
+  <title>サポートメニュー</title>
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .page { display: none; }
+    .page.active { display: block; }
+  </style>
 </head>
 <body>
   <h1>サポートメニュー</h1>
-  <ul>
-    <li><a href="help/faq.html">よくある質問（FAQ）</a></li>
-    <li><a href="help/guide.html">使い方ガイド</a></li>
-    <li><a href="help/contact.html">お問い合わせ</a></li>
-  </ul>
+  <nav>
+    <button onclick="showPage('faq')">FAQ</button>
+    <button onclick="showPage('guide')">使い方</button>
+    <button onclick="showPage('contact')">お問い合わせ</button>
+  </nav>
+
+  <div id="faq" class="page active">
+    <h2>よくある質問</h2>
+    <p>Q1. このアプリは無料ですか？</p>
+    <p>A. はい、基本機能は無料です。</p>
+  </div>
+
+  <div id="guide" class="page">
+    <h2>使い方ガイド</h2>
+    <p>＋ボタンを押して取引を入力してください。</p>
+  </div>
+
+  <div id="contact" class="page">
+    <h2>お問い合わせ</h2>
+    <p>xx.yoshiki@icloud.com にご連絡ください。</p>
+  </div>
+
+  <script>
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
